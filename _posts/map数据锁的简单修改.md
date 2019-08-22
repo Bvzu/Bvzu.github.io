@@ -4,7 +4,7 @@
 
 ## 定义可拷贝锁对象
 因为mutex和condition_variable都是不可以拷贝的，所以这里进行简单的封装，通过不断的new和delete进行。
-```cpp
+```
 #include <mutex>
 #include <condition_variable>
 
@@ -81,7 +81,7 @@ private:
 }
 ```
 # 写锁
-```cpp
+```
 
 class WriteGud{
 public:
@@ -100,7 +100,7 @@ private:
 
 ```
 # 读锁
-```cpp
+```
 
 class ReadGud{
 public:
@@ -121,7 +121,7 @@ private:
 
 # 使用
 
-```cpp
+```
 std::map<RWLock, Data> mData;
 RWLock rwlock;
 Data data;
